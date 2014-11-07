@@ -125,6 +125,8 @@ abstract class ModDZTagsSimilarHelper
         }
 
         $query->order($db->quoteName('count') . ' DESC');
+        $query->order($db->quoteName('cc.core_created_time') . ' DESC'); // Secondary ordering
+        
         $db->setQuery($query, 0, $maximum);
         $results = $db->loadObjectList();
 
