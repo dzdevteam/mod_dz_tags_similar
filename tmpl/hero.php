@@ -17,7 +17,7 @@ defined('_JEXEC') or die;
     <?php foreach ($list as $i => $item) : ?>
         <?php
             $link = JRoute::_(TagsHelperRoute::getItemRoute($item->content_item_id, $item->core_alias, $item->core_catid, $item->core_language, $item->type_alias, $item->router));
-            $image_src = JUri::root() . 'media/com_dota2/images/dota2/heroes/' . $item->core_alias . '_hphover.png';
+            $image_src = JUri::root() . 'media/com_dota2/images/dota2/heroes/' . str_replace('-', '_', $item->core_alias) . '_full.png'; // Available: _full, _sb, _hphover, _vert
         ?>
         <div class="col-md-3">
             <?php $item->route = new JHelperRoute; ?>
