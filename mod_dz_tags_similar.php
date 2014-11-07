@@ -28,4 +28,4 @@ if (!count($list))
 
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 
-require JModuleHelper::getLayoutPath('mod_tags_similar', $params->get('layout', 'default'));
+require JModuleHelper::getLayoutPath('mod_dz_tags_similar', $params->get('layout', 'default'));
